@@ -10,7 +10,7 @@ const Business = () => {
   }, []);
 
   return (
-    <div>
+    <div className="py-4">
       <div className="grid grid-cols-2">
         {news?.map((n, i) => (
           <div key={i} className="m-2 shadow rounded-lg">
