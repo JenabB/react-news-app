@@ -1,14 +1,85 @@
 import CONFIG from "./config";
-import axios from "axios";
 
-export const newsApiBusiness = async () => {
-  let url = `https://newsapi.org/v2/top-headlines?country=id&category=business&apiKey=7900c016c15d400ba3f750a23ec10bcc&page=1`;
+export const getTopHeadline = async () => {
+  let url = `${CONFIG.BASE_URL}&apiKey=${CONFIG.API_KEY}`;
   return fetch(url)
     .then((response) => {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       return data;
+    })
+    .catch((error) => {
+      console.log(error.response);
+    });
+};
+
+export const getSports = async () => {
+  let url = `${CONFIG.BASE_URL}&category=sports&apiKey=${CONFIG.API_KEY}`;
+  return fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((error) => {
+      console.log(error.response);
+    });
+};
+
+export const getBusiness = async () => {
+  let url = `${CONFIG.BASE_URL}&category=business&apiKey=${CONFIG.API_KEY}`;
+  return fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((error) => {
+      console.log(error.response);
+    });
+};
+
+export const getTechnology = async () => {
+  let url = `${CONFIG.BASE_URL}&category=technology&apiKey=${CONFIG.API_KEY}`;
+  return fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((error) => {
+      console.log(error.response);
+    });
+};
+
+export const getEntertaiment = async () => {
+  let url = `${CONFIG.BASE_URL}&category=entertainment&apiKey=${CONFIG.API_KEY}`;
+  return fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((error) => {
+      console.log(error.response);
+    });
+};
+
+export const getHealth = async () => {
+  let url = `${CONFIG.BASE_URL}&category=health&apiKey=${CONFIG.API_KEY}`;
+  return fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((error) => {
+      console.log(error.response);
     });
 };
