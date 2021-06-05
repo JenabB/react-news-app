@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import { newsApiBusiness } from "./api/endpoint";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [news, setNews] = useState([]);
+
+  console.log("news", news);
+  useEffect(() => {
+    newsApiBusiness().then((data) => {
+      setNews(data.articles);
+    });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="grid grid-cols-2">
+        {news?.map((n, i) => (
+          <div key={i} className="m-2 shadow">
+            <img className="news-image" src={n.urlToImage} alt={n.title} />
+            <div className="p-2">
+              <h2 className="truncate">{n.title}</h2>
+              <h1>{n.author}</h1>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
