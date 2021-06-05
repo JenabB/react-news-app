@@ -76,6 +76,9 @@ export default function BasicExample() {
           <Route path="/health">
             <Health />
           </Route>
+          <Route path="/search">
+            <Health />
+          </Route>
         </Switch>
       </div>
     </Router>

@@ -1,7 +1,8 @@
 import Navigation from "./Navigation";
 import { FaSearch } from "react-icons/fa";
+// import { Link } from "react-router-dom";
 import "./App.css";
-
+// import Search from "./pages/Search";
 const App = () => {
   return (
     <div>
@@ -13,9 +14,16 @@ const App = () => {
         <h1 className="text-2xl font-bold text-white title-app">Berita</h1>
         <div>
           <FaSearch color="white" size="30" />
+          {/* <Link to="/search">
+            
+          </Link> */}
         </div>
       </div>
       <Navigation />
+
+      {/* <Route path="/search">
+        <Search />
+      </Route> */}
     </div>
   );
 };
