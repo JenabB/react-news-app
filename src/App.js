@@ -8,6 +8,7 @@ import Internasional from "./pages/Internasional";
 import GayaHidup from "./pages/GayaHidup";
 import Olahraga from "./pages/Olahraga";
 import Teknologi from "./pages/Teknologi";
+import "./App.css";
 
 const App = () => {
   return (

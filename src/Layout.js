@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
+import Headline from "./pages/Headline";
 
 const Layout = ({ children }) => {
   return (
@@ -18,6 +19,9 @@ const Layout = ({ children }) => {
         </div>
       </div>
 
+      <div className="p-2">
+        <Headline />
+      </div>
       <div>
         <nav className="bg-blue-200 py-4 sticky top-0">
           <ul className="flex overflow-auto font-bold text-sm">
