@@ -1,56 +1,64 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Business from "./pages/Business";
-import Entertaiment from "./pages/Entertaiment";
-import Headline from "./pages/Headline";
-import Health from "./pages/Health";
-import Sports from "./pages/Sports";
-import Technology from "./pages/Technology";
+import Ekonomi from "./pages/Ekonomi";
+import Hiburan from "./pages/Hiburan";
+import Nasional from "./pages/Nasional";
+import Internasional from "./pages/Internasional";
+import GayaHidup from "./pages/GayaHidup";
+import Olahraga from "./pages/Olahraga";
+import Teknologi from "./pages/Teknologi";
 
 export default function BasicExample() {
   return (
     <Router>
       <div>
         <nav className="bg-blue-200 py-4 sticky top-0">
-          <ul className="flex overflow-auto font-bold">
+          <ul className="flex overflow-auto font-bold text-sm">
             <li className="mx-2">
               <Link to="/">
                 <h1 className="bg-white px-2 py-1 text-blue-400 rounded-lg">
-                  Home
+                  Nasional
                 </h1>
               </Link>
             </li>
             <li className="mx-2">
-              <Link to="/sports">
+              <Link to="/internasional">
                 <h1 className="bg-white px-2 py-1 text-blue-400 rounded-lg">
-                  Sports
+                  Internasional
                 </h1>
               </Link>
             </li>
             <li className="mx-2">
-              <Link to="/business">
+              <Link to="/ekonomi">
                 <h1 className="bg-white px-2 py-1 text-blue-400 rounded-lg">
-                  Business
+                  Ekonomi
                 </h1>
               </Link>
             </li>
             <li className="mx-2">
-              <Link to="/technology">
+              <Link to="/olahraga">
                 <h1 className="bg-white px-2 py-1 text-blue-400 rounded-lg">
-                  Technology
+                  Olahraga
                 </h1>
               </Link>
             </li>
             <li className="mx-2">
-              <Link to="/entertaiment">
+              <Link to="/teknologi">
                 <h1 className="bg-white px-2 py-1 text-blue-400 rounded-lg">
-                  Entertaiment
+                  Teknologi
                 </h1>
               </Link>
             </li>
             <li className="mx-2">
-              <Link to="/health">
+              <Link to="/hiburan">
                 <h1 className="bg-white px-2 py-1 text-blue-400 rounded-lg">
-                  Health
+                  Hiburan
+                </h1>
+              </Link>
+            </li>
+            <li className="mx-2">
+              <Link to="/gaya-hidup">
+                <h1 className="bg-white px-2 py-1 text-blue-400 rounded-lg">
+                  GayaHidup
                 </h1>
               </Link>
             </li>
@@ -59,25 +67,25 @@ export default function BasicExample() {
 
         <Switch>
           <Route exact path="/">
-            <Headline />
+            <Nasional />
           </Route>
-          <Route path="/sports">
-            <Sports />
+          <Route path="/internasional">
+            <Internasional />
           </Route>
-          <Route path="/business">
-            <Business />
+          <Route path="/ekonomi">
+            <Ekonomi />
           </Route>
-          <Route path="/technology">
-            <Technology />
+          <Route path="/olahraga">
+            <Olahraga />
           </Route>
-          <Route path="/entertaiment">
-            <Entertaiment />
+          <Route path="/teknologi">
+            <Teknologi />
           </Route>
-          <Route path="/health">
-            <Health />
+          <Route path="/hiburan">
+            <Hiburan />
           </Route>
-          <Route path="/search">
-            <Health />
+          <Route path="/gaya-hidup">
+            <GayaHidup />
           </Route>
         </Switch>
       </div>

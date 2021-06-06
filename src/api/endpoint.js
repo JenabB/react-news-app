@@ -1,7 +1,7 @@
 import CONFIG from "./config";
 
-export const getTopHeadline = async () => {
-  let url = `${CONFIG.BASE_URL}&apiKey=${CONFIG.API_KEY}`;
+export const getNasional = async () => {
+  let url = `${CONFIG.BASE_URL}/nasional`;
   return fetch(url)
     .then((response) => {
       return response.json();
@@ -14,8 +14,8 @@ export const getTopHeadline = async () => {
     });
 };
 
-export const getSports = async () => {
-  let url = `${CONFIG.BASE_URL}&category=sports&apiKey=${CONFIG.API_KEY}`;
+export const getInternasional = async () => {
+  let url = `${CONFIG.BASE_URL}/internasional`;
   return fetch(url)
     .then((response) => {
       return response.json();
@@ -28,8 +28,8 @@ export const getSports = async () => {
     });
 };
 
-export const getBusiness = async () => {
-  let url = `${CONFIG.BASE_URL}&category=business&apiKey=${CONFIG.API_KEY}`;
+export const getEkonomi = async () => {
+  let url = `${CONFIG.BASE_URL}/ekonomi`;
   return fetch(url)
     .then((response) => {
       return response.json();
@@ -42,8 +42,8 @@ export const getBusiness = async () => {
     });
 };
 
-export const getTechnology = async () => {
-  let url = `${CONFIG.BASE_URL}&category=technology&apiKey=${CONFIG.API_KEY}`;
+export const getOlahraga = async () => {
+  let url = `${CONFIG.BASE_URL}/olahraga`;
   return fetch(url)
     .then((response) => {
       return response.json();
@@ -56,8 +56,8 @@ export const getTechnology = async () => {
     });
 };
 
-export const getEntertaiment = async () => {
-  let url = `${CONFIG.BASE_URL}&category=entertainment&apiKey=${CONFIG.API_KEY}`;
+export const getTeknologi = async () => {
+  let url = `${CONFIG.BASE_URL}/teknologi`;
   return fetch(url)
     .then((response) => {
       return response.json();
@@ -70,8 +70,22 @@ export const getEntertaiment = async () => {
     });
 };
 
-export const getHealth = async () => {
-  let url = `${CONFIG.BASE_URL}&category=health&apiKey=${CONFIG.API_KEY}`;
+export const getHiburan = async () => {
+  let url = `${CONFIG.BASE_URL}/hiburan`;
+  return fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((error) => {
+      console.log(error.response);
+    });
+};
+
+export const getGayaHidup = async () => {
+  let url = `${CONFIG.BASE_URL}/gaya-hidup`;
   return fetch(url)
     .then((response) => {
       return response.json();

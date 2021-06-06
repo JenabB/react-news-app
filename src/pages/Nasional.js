@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { getTopHeadline } from "../api/endpoint";
+import { getNasional } from "../api/endpoint";
 
-const Headline = () => {
+const Nasional = () => {
   const [news, setNews] = useState([]);
   useEffect(() => {
-    getTopHeadline().then((data) => {
+    getNasional().then((data) => {
       console.log("data", data);
-      setNews(data.articles);
+      setNews(data.data);
     });
   }, []);
 
@@ -14,14 +14,12 @@ const Headline = () => {
     <div className="py-4">
       <div className="grid grid-cols-2 lg:grid-cols-4">
         {news?.map((n, i) => (
-          <a href={n.url}>
+          <a href={n.link}>
             <div key={i} className="m-2 shadow rounded-lg">
-              <img className="news-image" src={n.urlToImage} alt={n.title} />
-
+              <img className="news-image" src={n.image.small} alt={n.title} />
               <div className="p-3">
-                <h1 className="my-2 font-bold">{n.source.name}</h1>
-                <h3 className="line-clamp-3">{n.title}</h3>
-                <h1>{n.author}</h1>
+                <h3 className="font-bold mb-3">{n.title}</h3>
+                <h4 className="line-clamp-3">{n.contentSnippet}</h4>
               </div>
             </div>
           </a>
@@ -31,4 +29,4 @@ const Headline = () => {
   );
 };
 
-export default Headline;
+export default Nasional;
