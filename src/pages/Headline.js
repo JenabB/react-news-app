@@ -5,13 +5,14 @@ const Headline = () => {
   const [news, setNews] = useState([]);
   useEffect(() => {
     getTopHeadline().then((data) => {
+      console.log("data", data);
       setNews(data.articles);
     });
   }, []);
 
   return (
     <div className="py-4">
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 lg:grid-cols-4">
         {news?.map((n, i) => (
           <a href={n.url}>
             <div key={i} className="m-2 shadow rounded-lg">
