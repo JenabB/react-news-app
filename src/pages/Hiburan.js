@@ -10,7 +10,7 @@ const Hiburan = () => {
   }, []);
 
   return (
-    <div className="py-4">
+    <div className="py-4 lg:w-3/4 sm:w-full mx-auto">
       <div className="grid grid-cols-2 lg:grid-cols-4">
         {news?.map((n, i) => (
           <a href={n.link}>
