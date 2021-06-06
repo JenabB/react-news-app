@@ -11,11 +11,13 @@ const Headline = () => {
 
   return (
     <div>
-      <h1>Headline</h1>
+      <h1 className="px-3">Headline</h1>
       <div className="grid grid-flow-col overflow-auto">
         {news.map((n) => (
-          <div className="bg-blue-300 m-1 p-6 rounded-lg headline-card">
-            <h1 className="line-clamp-4 text-sm">{n.title}</h1>
+          <div className="bg-blue-600 m-1 p-6 rounded-lg headline-card">
+            <h1 className="line-clamp-4 text-sm text-white font-bold">
+              {n.title}
+            </h1>
           </div>
         ))}
       </div>
