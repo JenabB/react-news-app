@@ -1,15 +1,23 @@
+// eslint-disable-next-line no-unused-vars
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Ekonomi from "./pages/Ekonomi";
-import Hiburan from "./pages/Hiburan";
-import Nasional from "./pages/Nasional";
-import Internasional from "./pages/Internasional";
-import GayaHidup from "./pages/GayaHidup";
-import Olahraga from "./pages/Olahraga";
-import Teknologi from "./pages/Teknologi";
+import { FaSearch } from "react-icons/fa";
 
-export default function BasicExample() {
+const Layout = ({ children }) => {
   return (
-    <Router>
+    <div>
+      <div
+        className="flex justify-between px-4 bg-blue-300 text-center py-5"
+        style={{ height: "70px" }}
+      >
+        <div></div>
+        <h1 className="text-2xl font-bold text-white title-app">Berita</h1>
+        <div>
+          <Link to="/search">
+            <FaSearch color="white" size="30" />
+          </Link>
+        </div>
+      </div>
+
       <div>
         <nav className="bg-blue-200 py-4 sticky top-0">
           <ul className="flex overflow-auto font-bold text-sm">
@@ -64,31 +72,11 @@ export default function BasicExample() {
             </li>
           </ul>
         </nav>
-
-        <Switch>
-          <Route exact path="/">
-            <Nasional />
-          </Route>
-          <Route path="/internasional">
-            <Internasional />
-          </Route>
-          <Route path="/ekonomi">
-            <Ekonomi />
-          </Route>
-          <Route path="/olahraga">
-            <Olahraga />
-          </Route>
-          <Route path="/teknologi">
-            <Teknologi />
-          </Route>
-          <Route path="/hiburan">
-            <Hiburan />
-          </Route>
-          <Route path="/gaya-hidup">
-            <GayaHidup />
-          </Route>
-        </Switch>
       </div>
-    </Router>
+
+      {children}
+    </div>
   );
-}
+};
+
+export default Layout;

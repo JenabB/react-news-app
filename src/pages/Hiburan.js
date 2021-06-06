@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getHiburan } from "../api/endpoint";
+import NewsResult from "../components/NewsResult";
 
 const Hiburan = () => {
   const [news, setNews] = useState([]);
@@ -9,23 +10,7 @@ const Hiburan = () => {
     });
   }, []);
 
-  return (
-    <div className="py-4 lg:w-3/4 sm:w-full mx-auto">
-      <div className="grid grid-cols-2 lg:grid-cols-4">
-        {news?.map((n, i) => (
-          <a href={n.link}>
-            <div key={i} className="m-2 shadow rounded-lg">
-              <img className="news-image" src={n.image.small} alt={n.title} />
-              <div className="p-3">
-                <h3 className="font-bold mb-3">{n.title}</h3>
-                <h4 className="line-clamp-3">{n.contentSnippet}</h4>
-              </div>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  );
+  return <NewsResult news={news} />;
 };
 
 export default Hiburan;
