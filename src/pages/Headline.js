@@ -12,10 +12,10 @@ const Headline = () => {
   return (
     <div>
       <h1>Headline</h1>
-      <div className="flex overflow-auto">
+      <div className="grid grid-flow-col overflow-auto">
         {news.map((n) => (
           <div className="bg-blue-300 m-1 p-6 rounded-lg headline-card">
-            <h1 className="line-clamp-5 text-xs">{n.title}</h1>
+            <h1 className="line-clamp-4 text-sm">{n.title}</h1>
           </div>
         ))}
       </div>
