@@ -27,7 +27,7 @@ const Search = () => {
   return (
     <div>
       <div
-        className="flex justify-between px-4 bg-blue-300 text-center py-5"
+        className="flex justify-between px-4 bg-blue-600 text-center py-5"
         style={{ height: "70px" }}
       >
         <div>
