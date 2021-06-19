@@ -12,6 +12,7 @@ const NewsResult = ({ news }) => {
                   className="news-image w-full"
                   src={n.image.small}
                   alt={n.title}
+                  loading="lazy"
                 />
                 <div className="p-3">
                   <h3 className="font-bold text-sm mb-3">{n.title}</h3>

@@ -10,7 +10,11 @@ const Ekonomi = () => {
     });
   }, []);
 
-  return <NewsResult news={news} />;
+  return (
+  <div>
+    {news.length === 0 ? (<div className="loader"></div>): (<NewsResult news={news} />)}
+  </div>
+  );
 };
 
 export default Ekonomi;
