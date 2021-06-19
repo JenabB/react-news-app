@@ -16,11 +16,13 @@ const Headline = () => {
         {news.length !== 0 ?
         
         news.map((n) => (
+          <a href={n.link}>
           <div className="bg-blue-600 m-1 p-6 rounded-lg headline-card">
             <h1 className="line-clamp-4 text-sm text-white font-bold">
               {n.title}
             </h1>
           </div>
+          </a>
         )): (
          
           <div className="grid grid-flow-col overflow-auto">
