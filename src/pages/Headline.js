@@ -11,7 +11,7 @@ const Headline = () => {
 
   return (
     <div>
-      <h1 className="px-3">Headline</h1>
+      <h1 className="px-3 text-blue-600 font-bold text-xl">Headline</h1>
       <div className="grid grid-flow-col overflow-auto">
         {news.length !== 0 ?
         
