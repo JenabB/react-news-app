@@ -1,13 +1,6 @@
 import Layout from "./Layout";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Search from "./pages/Search";
-import Ekonomi from "./pages/Ekonomi";
-import Hiburan from "./pages/Hiburan";
-import Nasional from "./pages/Nasional";
-import Internasional from "./pages/Internasional";
-import GayaHidup from "./pages/GayaHidup";
-import Olahraga from "./pages/Olahraga";
-import Teknologi from "./pages/Teknologi";
+import { Search, Ekonomi, Hiburan, Nasional, Internasional, GayaHidup, Olahraga, Teknologi} from "./pages"
 import "./App.css";
 
 const App = () => {

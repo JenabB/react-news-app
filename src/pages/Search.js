@@ -14,7 +14,7 @@ const Search = () => {
 
   // let history = useHistory();
   // function goBack() {
-  //   // history.push("/");
+  //   history.goBack();
   // }
 
   useEffect(() => {
