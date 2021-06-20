@@ -1,4 +1,4 @@
-import CONFIG from "./config";
+import CONFIG from './config';
 
 export const getNasional = async () => {
   let url = `${CONFIG.BASE_URL}/nasional`;
@@ -91,6 +91,53 @@ export const getGayaHidup = async () => {
       return response.json();
     })
     .then((data) => {
+      return data;
+    })
+    .catch((error) => {
+      console.log(error.response);
+    });
+};
+
+//republika
+export const getIslamDigest = async () => {
+  let url = `${CONFIG.BASE_URL_REPUBLIKA}/islam-digest`;
+  return fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+      return data;
+    })
+    .catch((error) => {
+      console.log(error.response);
+    });
+};
+
+export const getKhazanah = async () => {
+  let url = `${CONFIG.BASE_URL_REPUBLIKA}/khazanah`;
+  return fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+      return data;
+    })
+    .catch((error) => {
+      console.log(error.response);
+    });
+};
+
+// CNBC
+export const getSyariah = async () => {
+  let url = `${CONFIG.BASE_URL_CNBC}/syariah`;
+  return fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
       return data;
     })
     .catch((error) => {

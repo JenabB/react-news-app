@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 // import { useHistory } from "react-router-dom";
-import CONFIG from "../api/config";
-import NewsResult from "../components/NewsResult";
+import CONFIG from "../../api/config";
+import NewsResult from "../../components/NewsResult";
 import { FaArrowLeft } from "react-icons/fa";
+
 const Search = () => {
   const [news, setNews] = useState([]);
   const [query, setQuery] = useState("");

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getTeknologi } from "../api/endpoint";
+import { getTeknologi } from "../../api/endpoint";
 
 const Headline = () => {
   const [news, setNews] = useState([]);

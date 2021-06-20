@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { getHiburan } from "../api/endpoint";
-import NewsResult from "../components/NewsResult";
+import { getTeknologi } from "../../api/endpoint";
+import NewsResult from "../../components/NewsResult";
 
-const Hiburan = () => {
+const Teknologi = () => {
   const [news, setNews] = useState([]);
   useEffect(() => {
-    getHiburan().then((data) => {
+    getTeknologi().then((data) => {
       setNews(data.data);
     });
   }, []);
@@ -17,4 +17,4 @@ const Hiburan = () => {
     );
 };
 
-export default Hiburan;
+export default Teknologi;

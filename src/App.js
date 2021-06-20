@@ -1,29 +1,40 @@
-import Layout from "./Layout";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Search, Ekonomi, Hiburan, Nasional, Internasional, GayaHidup, Olahraga, Teknologi} from "./pages"
-import "./App.css";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import News from './News';
+import './App.css';
+import Islami from './Islami';
 
-const App = () => {
+export default function App() {
   return (
     <Router>
-      <Switch>
-        <Route path="/search" component={Search} />
-        <Route>
-          <Layout>
-            <Switch>
-              <Route exact path="/" component={Nasional} />
-              <Route path="/internasional" component={Internasional} />
-              <Route path="/ekonomi" component={Ekonomi} />
-              <Route path="/olahraga" component={Olahraga} />
-              <Route path="/teknologi" component={Teknologi} />
-              <Route path="/hiburan" component={Hiburan} />
-              <Route path="/gaya-hidup" component={GayaHidup} />
-            </Switch>
-          </Layout>
-        </Route>
-      </Switch>
+      <div>
+        <Switch>
+          <Route path="/tentang">
+            <About />
+          </Route>
+          <Route path="/islami" component={Islami} />
+
+          <Route path="/" component={News} />
+        </Switch>
+
+        <nav>
+          <ul className="flex fixed bg-blue-600 bottom-0 w-full justify-center">
+            <li className="p-2">
+              <Link to="/">Berita</Link>
+            </li>
+            <li className="p-2">
+              <Link to="/islami">Islami</Link>
+            </li>
+            <li className="p-2">
+              <Link to="/tentang">Tentang</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </Router>
   );
-};
+}
 
-export default App;
+function About() {
+  return <h2>About</h2>;
+}

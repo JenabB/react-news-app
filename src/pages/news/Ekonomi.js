@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { getEkonomi } from "../api/endpoint";
-import NewsResult from "../components/NewsResult";
+import { getEkonomi } from "../../api/endpoint";
+import NewsResult from "../../components/NewsResult";
 
 const Ekonomi = () => {
   const [news, setNews] = useState([]);

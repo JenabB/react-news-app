@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
-import Headline from "./pages/Headline";
+import Headline from "./pages/news/Headline";
 
 const Layout = ({ children }) => {
   return (
@@ -71,6 +71,20 @@ const Layout = ({ children }) => {
               <Link to="/gaya-hidup">
                 <h1 className="bg-white px-2 py-1 text-blue-600 rounded-lg">
                   GayaHidup
+                </h1>
+              </Link>
+            </li>
+            <li className="mx-2">
+              <Link to="/intisari-islam">
+                <h1 className="bg-white px-2 py-1 text-blue-600 rounded-lg">
+                  IntisariIslam
+                </h1>
+              </Link>
+            </li>
+            <li className="mx-2">
+              <Link to="/intisari-islam">
+                <h1 className="bg-white px-2 py-1 text-blue-600 rounded-lg">
+                  Khazanah
                 </h1>
               </Link>
             </li>

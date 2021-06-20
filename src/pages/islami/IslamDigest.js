@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { getTeknologi } from "../api/endpoint";
-import NewsResult from "../components/NewsResult";
+import { getIslamDigest } from "../../api/endpoint";
+import NewsResult from "../../components/NewsResult";
 
-const Teknologi = () => {
+const IslamDigest = () => {
   const [news, setNews] = useState([]);
   useEffect(() => {
-    getTeknologi().then((data) => {
+    getIslamDigest().then((data) => {
       setNews(data.data);
     });
   }, []);
@@ -17,4 +17,4 @@ const Teknologi = () => {
     );
 };
 
-export default Teknologi;
+export default IslamDigest;
