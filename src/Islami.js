@@ -1,4 +1,4 @@
-import Layout from './Layout';
+import LayoutIslami from './LayoutIslami';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { IslamDigest, Khazanah, Syariah } from './pages';
 
@@ -8,13 +8,13 @@ const Islami = () => {
       <Switch>
         {/* <Route path="/search" component={Search} /> */}
         <Route>
-          <Layout>
+          <LayoutIslami>
             <Switch>
-              <Route exact path="/" component={IslamDigest} />
+              <Route path="/islami" component={IslamDigest} />
               <Route path="/khazanah" component={Khazanah} />
               <Route path="/syariah" component={Syariah} />
             </Switch>
-          </Layout>
+          </LayoutIslami>
         </Route>
       </Switch>
     </Router>
