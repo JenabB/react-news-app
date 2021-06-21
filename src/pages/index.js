@@ -6,9 +6,12 @@ import Internasional from './news/Internasional';
 import GayaHidup from './news/GayaHidup';
 import Olahraga from './news/Olahraga';
 import Teknologi from './news/Teknologi';
+import Humaniora from './news/Humaniora';
+
 import IslamDigest from './islami/IslamDigest';
 import Khazanah from './islami/Khazanah';
 import Syariah from './islami/Syariah';
+import Ramadan from './islami/Ramadan';
 
 export {
   Search,
@@ -19,7 +22,9 @@ export {
   GayaHidup,
   Olahraga,
   Teknologi,
+  Humaniora,
   IslamDigest,
   Khazanah,
   Syariah,
+  Ramadan,
 };

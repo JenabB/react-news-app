@@ -22,6 +22,13 @@ const Layout = ({ children }) => {
               </Link>
             </li>
             <li className="mx-2">
+              <Link to="/ramadan">
+                <h1 className="bg-white px-2 py-1 text-blue-600 rounded-lg">
+                  Ramadan
+                </h1>
+              </Link>
+            </li>
+            <li className="mx-2">
               <Link to="/syariah">
                 <h1 className="bg-white px-2 py-1 text-blue-600 rounded-lg">
                   Syariah

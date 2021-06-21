@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-const NewsResult = ({ news }) => {
+const NewsResultTribun = ({ news }) => {
   return (
     <div>
       <div className="py-4 lg:w-3/4 sm:w-full mx-auto">
@@ -10,7 +10,7 @@ const NewsResult = ({ news }) => {
               <div key={i} className="m-2 shadow rounded-lg">
                 <img
                   className="news-image w-full"
-                  src={n.image.small}
+                  src={n.image}
                   alt={n.title}
                   loading="lazy"
                 />
@@ -30,4 +30,4 @@ const NewsResult = ({ news }) => {
   );
 };
 
-export default NewsResult;
+export default NewsResultTribun;

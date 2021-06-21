@@ -1,6 +1,16 @@
-import Layout from "./Layout";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Search, Ekonomi, Hiburan, Nasional, Internasional, GayaHidup, Olahraga, Teknologi, IslamDigest} from "./pages";
+import Layout from './Layout';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  Search,
+  Ekonomi,
+  Hiburan,
+  Nasional,
+  Internasional,
+  GayaHidup,
+  Olahraga,
+  Teknologi,
+  Humaniora,
+} from './pages';
 
 const News = () => {
   return (
@@ -17,7 +27,7 @@ const News = () => {
               <Route path="/teknologi" component={Teknologi} />
               <Route path="/hiburan" component={Hiburan} />
               <Route path="/gaya-hidup" component={GayaHidup} />
-              <Route path="/intisari-islam" component={IslamDigest} />
+              <Route path="/humaniora" component={Humaniora} />
             </Switch>
           </Layout>
         </Route>

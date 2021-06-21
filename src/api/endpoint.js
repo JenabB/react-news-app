@@ -1,5 +1,6 @@
 import CONFIG from './config';
 
+// CNN
 export const getNasional = async () => {
   let url = `${CONFIG.BASE_URL}/nasional`;
   return fetch(url)
@@ -106,7 +107,6 @@ export const getIslamDigest = async () => {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       return data;
     })
     .catch((error) => {
@@ -121,7 +121,6 @@ export const getKhazanah = async () => {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       return data;
     })
     .catch((error) => {
@@ -132,6 +131,36 @@ export const getKhazanah = async () => {
 // CNBC
 export const getSyariah = async () => {
   let url = `${CONFIG.BASE_URL_CNBC}/syariah`;
+  return fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((error) => {
+      console.log(error.response);
+    });
+};
+
+// Antara
+export const getHumaniora = async () => {
+  let url = `${CONFIG.BASE_URL_ANTARA}/humaniora`;
+  return fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((error) => {
+      console.log(error.response);
+    });
+};
+
+// Tribun
+export const getRamadan = async () => {
+  let url = `${CONFIG.BASE_URL_TRIBUN}/ramadan`;
   return fetch(url)
     .then((response) => {
       return response.json();
