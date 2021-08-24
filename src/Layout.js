@@ -1,20 +1,21 @@
 // eslint-disable-next-line no-unused-vars
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { FaSearch } from 'react-icons/fa';
-import Headline from './pages/news/Headline';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Headline from "./pages/news/Headline";
 
 const Layout = ({ children }) => {
   return (
     <div>
       <div
         className="flex justify-between px-4 bg-blue-600 text-center py-5"
-        style={{ height: '70px' }}
+        style={{ height: "70px" }}
       >
         <div></div>
         <h1 className="text-2xl font-bold text-white title-app">Berita</h1>
         <div>
           <Link to="/search">
-            <FaSearch color="white" size="30" />
+            <h1 className="material-icons md-24 flex justify-center text-white">
+              search
+            </h1>
           </Link>
         </div>
       </div>

@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
-// import { useHistory } from "react-router-dom";
 import CONFIG from "../../api/config";
 import NewsResult from "../../components/NewsResult";
-import { FaArrowLeft } from "react-icons/fa";
 
 const Search = () => {
   const [news, setNews] = useState([]);
@@ -12,11 +10,6 @@ const Search = () => {
     setQuery(e.target.value);
     console.log(e.value);
   };
-
-  // let history = useHistory();
-  // function goBack() {
-  //   history.goBack();
-  // }
 
   useEffect(() => {
     fetch(`${CONFIG.SEARCH_URL}${query}`)
@@ -31,9 +24,7 @@ const Search = () => {
         className="flex justify-between px-4 bg-blue-600 text-center py-5"
         style={{ height: "70px" }}
       >
-        <div>
-          <FaArrowLeft color="white" size="30" />
-        </div>
+        <div></div>
         <div>
           <input
             className="rounded px-4 py-1 w-3/4"
